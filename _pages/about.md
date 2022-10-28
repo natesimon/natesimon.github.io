@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Aerial Roboticist at <a href='https://www.princeton.edu/'>Princeton University</a>.
+subtitle: Aerial Robotics at <a href='https://www.princeton.edu/'>Princeton University</a>.
 
 profile:
   align: right
