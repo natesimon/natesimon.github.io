@@ -2,11 +2,15 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: as a graduate teaching assistant
 nav: true
 nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
-
-Organize your courses by years, topics, or universities, however you like!
+### Princeton University
+MAE 345 / 549 -- [Introduction to Robotics](https://irom-lab.princeton.edu/intro-to-robotics/): Fall 2022  
+MAE 206 -- Introduction to Engineering Dynamics: Spring 2022
+### Stanford University
+MS&E 297 -- [Hacking for Defense](https://www.h4d.us/): Spring 2019, 2020  
+ME 70 -- Introductory Fluids Engineering: Winter 2020  
+MS&E 293 -- Technology and National Security: Fall 2019
