@@ -21,7 +21,7 @@ social: true  # includes social icons at the bottom of the page
 
 I am a PhD Candidate in the [Intelligent Robot Motion Lab](https://irom-lab.princeton.edu/) and [Fundamental and Applied Studies in Turbulence Group](https://fluids.princeton.edu/), co-advised by [Ani Majumdar](https://irom-lab.princeton.edu/majumdar/) and [Marcus Hultmark](https://mae.princeton.edu/people/faculty/hultmark). I work on enabling unmanned aerial vehicles (UAVs) to fly in extreme wind.
 
-Prior to the PhD, I received a bachelor's and master's degree in Mechanical Engineering from [Stanford University](https://me.stanford.edu/).
+Prior to the PhD, I received a bachelor's and master's degrees in Mechanical Engineering from [Stanford University](https://me.stanford.edu/).
 
 My email address is ``nsimon`` at ``princeton`` dot ``edu``.
 
