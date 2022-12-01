@@ -20,6 +20,7 @@ _[Steve Blank](https://msande.stanford.edu/people/steven-blank), [Steve Weinstei
 Solving National Security issues with the Lean Launchpad. Student teams apply lean startup principles to national security problems to discover and validate customer needs, building iterative prototypes to test product-mission fit. Teams take a hands-on approach requiring close engagement with military, DoD, and other government agency end-users.  
 **ME 70 -- Introductory Fluids Engineering: Winter 2020**  
 _[Professor Mark Capelli](https://profiles.stanford.edu/mark-cappelli)_  
+Fluid mechanics applied to engineering problems; topics include incompressible flow, hydrostatics, control volume analysis, Bernoulli's equation, Euler equations, dimensional analysis. Internal and external boundary layer flows. Introductory lift and drag.  
 **MS&E 293 -- Technology and National Security: Fall 2019**  
 _[Herb Lin](https://cisac.fsi.stanford.edu/people/herbert_lin)_  
 Current and historic U.S. national security challenges and the role that technology plays in shaping our understanding and response to these challenges. Topics include: interplay between technology and modes of warfare; dominant and emerging technologies such as nuclear weapons, cyber, sensors, stealth, and biological; security challenges to the U.S.; and the U.S. response and adaptation to new technologies of military significance.
