@@ -27,7 +27,7 @@ There is a great deal of open-source content by PX4 (tutorials, pages, forum Q&A
     }
 </style>
 
-If you find this guide to be helpful in your research, please cite our [paper](https://arxiv.org/pdf/2210.05857.pdf), which has been accepted to [ICRA 2023](https://www.icra2023.org/).
+If you find this guide to be helpful in your research, please cite our [paper](https://arxiv.org/pdf/2210.05857.pdf), which is to appear at [ICRA 2023](https://www.icra2023.org/).
 ```
 @article{simon2022flowdrone,
   title={FlowDrone: wind estimation and gust rejection on UAVs using fast-response hot-wire flow sensors},
@@ -111,20 +111,113 @@ The PX4 computer and firmware is optimized for speed. This optimization renders 
 #### Installing Prerequisites on the Raspberry Pi
 Follow the primary guide ([PX4-ROS 2 Bridge](https://docs.px4.io/v1.12/en/ros/ros2_comm.html)) closely. My notes seek to augment the main tutorial. There are four main prerequisites.
 <details><summary><strong>Install Ubuntu 20.04</strong></summary>
-    <p>First, install Ubuntu 20.04 on the Raspberry Pi (<a href="https://www.youtube.com/watch?v=GVgMM_TFeOw" target="_blank">youtube</a>).</p>
+    <p>First, boot Ubuntu 20.04 onto the Raspberry Pi (<a href="https://www.youtube.com/watch?v=GVgMM_TFeOw" target="_blank">youtube</a>) using an SD card. I installed <a href="https://cdimage.ubuntu.com/releases/focal/release/" target="_blank">ubuntu-20.04.5-preinstalled-server-arm64+raspi.img.xz</a>. If you would like the desktop version, you can upgrade via <code>sudo apt-get install ubuntu-desktop</code>. The youtube tutorial recommends modifying the netplan to enable connection to wifi upon boot. I prefer to install the default .iso and connect the Raspberry Pi to a monitor, mouse, and keyboard, and to edit the <a href="https://dev.to/joeneville_/configure-ubuntu-wifi-with-netplan-4je0" target="_blank">netplan</a> from there.</p> <p>Here is an example of how you could configure the netplan via <code>sudo nano /etc/netplan/50-cloud-init.yaml </code>: (be very careful about indentation in .yaml files!)
+        <pre>
+            <code>
+    network:
+        ethernets:
+            eth0:
+                dhcp4: true
+                optional: true
+        wifis:
+            wlan0:
+                addresses:
+                - 192.168.0.175/24
+                gateway4: 192.168.0.1
+                nameservers:
+                    addresses: [192.168.0.1, 8.8.8.8]
+                optional: true
+                access-points:
+                    "WIFI NAME":
+                        password: "WIFI PASSWORD"
+        version: 2
+            </code>
+        </pre>
+    Once you have the netplan configured, you can apply the changes with <code>sudo netplan apply 50-cloud-init.yaml</code>. After a minute or so, you can check the status of the network with <code>ping google.com</code>. If you are able to ping, your pi is connected to wifi!</p>
+
 </details>
 <details><summary><strong>Install Fast-DDS</strong></summary>
-    <p>Follow the main tutorial: <a href="https://docs.px4.io/v1.12/en/dev_setup/fast-dds-installation.html" target="_blank">Fast DDS Installation</a></p>
-    <p>Before Fast-DDS, you will have to install java. Instead of using <a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" target="_blank">Java SE Development Kit 8 Downloads</a>, I followed this <a href="https://github.com/PX4/px4_ros_com/issues/20" target="_blank">github issue</a> and installed <code>sudo apt install openjdk-11-jre-headless</code>.</p>
-    <p>You may also have to install <code>curl</code>, then <code>sdkman</code>, and finally DO NOT INSTALL <code>gradle</code> beyond version 6.3. Otherwise, an error may occur due to the depreciation of functions such as <code>compile</code>.</p>
-    <p>Note: At the time of writing, the PX4 code snippet clones <code>v2.0.0</code> of Fast-DDS. I ran into an error which is fixed by <code>v2.0.2</code>. After cloning, I simply had to checkout the tag of the correct version. (<a href="https://github.com/eProsima/Fast-DDS/issues/2713" target="_blank">See issue.</a>) I also had to download <a href="https://fast-dds.docs.eprosima.com/en/latest/installation/sources/sources_linux.html#openssl-sl" target="_blank"><code>libssl-dev</code></a>.</p>
+    <p>Follow the main tutorial: <a href="https://docs.px4.io/v1.12/en/dev_setup/fast-dds-installation.html" target="_blank">Fast DDS Installation</a>. Here is the exact order in which I installed Fast-DDS and FastRTPSGen on a fresh Ubuntu 20.04 install:</p>
+    <pre>
+        <code>
+sudo apt install openjdk-11-jre-headless
+sudo apt install curl
+sudo apt install zip
+curl -s "https://get.sdkman.io" | bash
+source "/home/ubuntu/.sdkman/bin/sdkman-init.sh"
+sdk install gradle 6.3
+sudo apt install cmake
+sudo apt-get install build-essential
+
+git clone https://github.com/eProsima/foonathan_memory_vendor.git
+cd foonathan_memory_vendor
+mkdir build && cd build
+cmake ..
+sudo cmake --build . --target install
+
+sudo apt install libssl-dev
+git clone --recursive https://github.com/eProsima/Fast-DDS.git -b v2.0.2 ~/FastDDS-2.0.2
+cd ~/FastDDS-2.0.2
+mkdir build && cd build
+cmake -DTHIRDPARTY=ON -DSECURITY=ON ..
+make -j$(nproc --all)
+sudo make install
+
+git clone --recursive https://github.com/eProsima/Fast-DDS-Gen.git -b v1.0.4 ~/Fast-RTPS-Gen \
+    && cd ~/Fast-RTPS-Gen \
+    && ./gradlew assemble \
+    && sudo ./gradlew install
+        </code>
+    </pre>
+    <p>You can check your installation with <code>which fastrtpsgen</code>.</p>
 </details>
 <details><summary><strong>Install ROS2 Foxy</strong></summary>
-    <p>Follow the ROS2 <a href="https://docs.ros.org/en/foxy/How-To-Guides/Installing-on-Raspberry-Pi.html" target="_blank">installation instructions</a> for the Raspberry Pi.</p>
+    <p>Follow the Ubuntu (Debian) <a href="https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html" target="_blank">installation instructions</a> for ROS2 Foxy. I opted for the ROS-Base Install (Bare Bones) as opposed to the Desktop install. After installing and sourcing your installation, you should be able to run <code>ros2</code> without error. Make sure you install the additional dependencies in the <a href="https://docs.px4.io/v1.12/en/ros/ros2_comm.html#install-ros-2" target="_blank">PX4 tutorial</a>.</p>
 </details>
 <details><summary><strong>Install and build the ROS 2 Workspace (<code>px4_ros_com</code> and <code>px4_msgs</code>)</strong></summary>
-    <p>Coming soon!</p>
+    <p>The <code>px4_ros_com</code> and <code>px4_msgs</code> messaging libraries provide the infrastructure to communicate with the Pixhawk 4 over ROS2. The official repositories do not (at the time of writing) support publisher/subscriber nodes written in Python, which we found very helpful in our development. If you wish to have this Python capability, I recommend installing our forks (and specifically, using the correct branch of our px4-ros-com fork). As a warning, our forks may not be maintained.
+    
+    <pre>
+        <code>
+    mkdir -p ~/px4_ros_com_ros2/src
+    git clone https://github.com/irom-lab/px4_ros_com.git ~/px4_ros_com_ros2/src/px4_ros_com
+    git clone https://github.com/irom-lab/px4_msgs.git ~/px4_ros_com_ros2/src/px4_msgs
+    git fetch origin other-python
+    git checkout other-python
+    cd ~/px4_ros_com_ros2/src/px4_ros_com/scripts
+    ./build_ros2_workspace.bash
+        </code>
+    </pre>
+    The build process can take >30 min on the Raspberry Pi 4. Oftentimes, it has an stderr output. However, running <code>./build_ros2_workspace.bash</code> again often corrects this error (in around 1 min).
+    </p>
 </details><br>
+
+#### Configuring the ROS2 Bridge Topics
+
+One of the advantages of the ROS2 bridge is your ability to communicate across any of the UORB topics. From a Pixhawk 4 shell, you can list all of these topics with `uorb top -1`. They are also listed in the [uORB Message Reference](https://docs.px4.io/main/en/msg_docs/). To enable the bridge, there must be agreement between what the Pixhawk 4 publishes and what the Raspberry Pi 4 subscribes to (and vice versa).
+
+#### Making your first connection over the ROS2 Bridge
+
+Plug your Pixhawk 4 into the Raspberry Pi via USB/microUSB. The mavlink shell is a convenient way to access the Pixhawk 4 shell from the Raspberry Pi to start the micrortps_client.  
+
+First, download the [`mavlink_shell.py`](https://raw.githubusercontent.com/PX4/PX4-Autopilot/main/Tools/mavlink_shell.py) script onto the Raspberry Pi 4. You will have to install pymavlink (`pip3 install --user pymavlink`) before successfully executing the shell.
+
+You can then run the shell and start the client
+```
+python3 mavlink_shell.py
+>nsh micrortps_client start -t UART
+```
+Back on the Raspberry Pi, start the micrortps_agent to complete the bridge. Remember to source the px4-ros-com workspace in every terminal before using the agent or ros2 commands.
+```
+source ~/px4_ros_com_ros2/install/setup.bash
+micrortps_agent -start t UART
+```
+You should see a list of the subscribed and published topics that you can send/receive to/from the Pixhawk 4. In a new terminal, you can access some of these topics:
+```
+source ~/px4_ros_com_ros2/install/setup.bash
+ros2 topic list
+ros2 topic echo /fmu/vehicle_attitude/out
+```
 
 ### Offboard Control <a name="offboard-control"></a>
 
