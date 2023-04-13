@@ -19,9 +19,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a PhD Candidate in the [Intelligent Robot Motion Lab](https://irom-lab.princeton.edu/) and [Fundamental and Applied Studies in Turbulence Group](https://fluids.princeton.edu/), co-advised by [Ani Majumdar](https://irom-lab.princeton.edu/majumdar/) and [Marcus Hultmark](https://mae.princeton.edu/people/faculty/hultmark). I work on enabling unmanned aerial vehicles (UAVs) to fly in extreme wind.
+I am a PhD Candidate in the [Intelligent Robot Motion Lab](https://irom-lab.princeton.edu/) and [Fundamental and Applied Studies in Turbulence Group](https://fluids.princeton.edu/), co-advised by [Ani Majumdar](https://irom-lab.princeton.edu/majumdar/) and [Marcus Hultmark](https://mae.princeton.edu/people/faculty/hultmark). I work on enabling unmanned aerial vehicles (UAVs) to fly in extreme wind. In my [projects](https://natesimon.github.io/projects/) page, you can follow my UAV [build guide](https://natesimon.github.io/projects/flowdrone/) to build an autonomous UAV using the [PX4 Autopilot](https://px4.io/). 
 
-Prior to the PhD, I received bachelor's and master's degrees in Mechanical Engineering from [Stanford University](https://me.stanford.edu/). In my free time, I am an avid pilot and juggler.
+Prior to the PhD, I received bachelor's and master's degrees in Mechanical Engineering from [Stanford University](https://me.stanford.edu/). Outside of work, I am a member of the [Princeton Flying Club](http://www.princetonflyingclub.com/) and [Soaring Tigers](http://soaringtigers.org/), and enjoy piloting powered (and unpowered) aircraft.
 
 My email address is ``nsimon`` at ``princeton`` dot ``edu``.
 
