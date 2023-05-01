@@ -6,7 +6,7 @@ subtitle: Aerial Robotics at <a href='https://www.princeton.edu/'>Princeton Univ
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: profile.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>Department of <a href='https://mae.princeton.edu/'>Mechanical and Aerospace Engineering</a>.</p>
