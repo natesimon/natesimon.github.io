@@ -20,11 +20,11 @@ talks: true # includes a list of talks
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a PhD Candidate in the [Intelligent Robot Motion Lab](https://irom-lab.princeton.edu/) and [Fundamental and Applied Studies in Turbulence Group](https://fluids.princeton.edu/), co-advised by [Ani Majumdar](https://irom-lab.princeton.edu/majumdar/) and [Marcus Hultmark](https://mae.princeton.edu/people/faculty/hultmark). I work on enabling unmanned aerial vehicles (UAVs) to fly in extreme wind. In my [projects](https://natesimon.github.io/projects/) page, you can follow my UAV [build guide](https://natesimon.github.io/projects/flowdrone/) to build an autonomous UAV using the [PX4 Autopilot](https://px4.io/). 
+I am a PhD Candidate in the [Intelligent Robot Motion Lab](https://irom-lab.princeton.edu/) and [Fundamental and Applied Studies in Turbulence Group](https://fluids.princeton.edu/), co-advised by [Ani Majumdar](https://irom-lab.princeton.edu/majumdar/) and [Marcus Hultmark](https://mae.princeton.edu/people/faculty/hultmark). I am working to improve unmanned aerial vehicle (UAV) performance in real-world conditions such as extreme wind and gusts, ground effect, and proximity flight. I am also interested in applying UAV platforms to conduct basic research in the atmosphere, as well as applying computer vision techniques to improve microUAV performance. In my [projects](https://natesimon.github.io/projects/) page, you can follow my UAV [build guide](https://natesimon.github.io/projects/flowdrone/) to build an autonomous UAV using the [PX4 Autopilot](https://px4.io/). 
 
-Prior to the PhD, I received bachelor's and master's degrees in Mechanical Engineering from [Stanford University](https://me.stanford.edu/). Outside of work, I am a member of the [Princeton Flying Club](http://www.princetonflyingclub.com/) and [Soaring Tigers](http://soaringtigers.org/), and enjoy piloting powered (and unpowered) aircraft.
+Prior to the PhD, I received bachelor's and master's degrees in Mechanical Engineering from [Stanford University](https://me.stanford.edu/). Outside of work, I am a member of the [Princeton Flying Club](http://www.princetonflyingclub.com/) and [Soaring Tigers](https://soaringtigers.org/). I recently earned my instrument rating, and have written about my experience [here](./projects/instrument).
 
-My email address is ``nsimon`` at ``princeton`` dot ``edu``.
+Feel free to contact me at: ``nsimon`` at ``princeton`` dot ``edu``.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
