@@ -22,7 +22,7 @@ social: true  # includes social icons at the bottom of the page
 
 I am a PhD Candidate in the [Intelligent Robot Motion Lab](https://irom-lab.princeton.edu/) and [Fundamental and Applied Studies in Turbulence Group](https://fluids.princeton.edu/), co-advised by [Ani Majumdar](https://irom-lab.princeton.edu/majumdar/) and [Marcus Hultmark](https://mae.princeton.edu/people/faculty/hultmark). I am working to improve unmanned aerial vehicle (UAV) performance in real-world conditions such as extreme wind and gusts, ground effect, and proximity flight. I am also interested in applying UAV platforms to conduct basic research in the atmosphere, as well as applying computer vision techniques to improve microUAV performance. In my [projects](https://natesimon.github.io/projects/) page, you can follow my UAV [build guide](https://natesimon.github.io/projects/flowdrone/) to build an autonomous UAV using the [PX4 Autopilot](https://px4.io/). 
 
-Here is a 3-min video overview of my research, which received a top award at [Princeton Research Day](https://researchday.princeton.edu/).
+Here is a 3-min video of my recent work, from [Princeton Research Day](https://researchday.princeton.edu/):
 <div class="row mt-3">
     <div class="col-sm col-12 mt-3 mt-md-0 d-flex justify-content-center">
         {% include video.html path="https://www.youtube.com/embed/uw0p1I9V2CM" class="img-fluid rounded z-depth-1" %}
