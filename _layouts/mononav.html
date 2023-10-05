@@ -1,9 +1,6 @@
 ---
 layout: default
 ---
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 
 <body>
     <br>
@@ -11,7 +8,7 @@ layout: default
     <center><span style="font-size:40px;font-weight:bold;">Depth Estimation and Reconstruction<span></center>
     </br>
     <br></br>
-    <table align=center width=600px>
+    <table align=center width=400px>
         <tr>
             <td align=center width=100px>
             <center><span style="font-size:22px"><a href="https://natesimon.github.io/" target="_blank">Nathaniel Simon</a></span></center>
@@ -26,23 +23,17 @@ layout: default
     <center><span style="font-size:20px"><a href="https://robo.princeton.edu/" target="_blank">Princeton University</a></span></center></td>
     </td>
     <br></br>
-    <table align=center width=600px>
+    <table align=center width=400px>
         <tr>
-        <td align=center width=100px><center><span style="font-size:28px"><a href="../../assets/pdf/MonoNav_IROS2023.pdf">[PDF]</a></span></center></td>
-        <td align=center width=100px><center><span style="font-size:28px"><a href="https://youtu.be/kVoIIsdoQR4">[Video]</a></span></center></td>
-        <td align=center width=100px><center><span style="font-size:28px"><a href="https://github.com/natesimon/MonoNav/">[Code]</a></span></center></td>
+        <td align=center width=20px><center><span style="font-size:28px"><a href="../../assets/pdf/MonoNav_IROS2023.pdf">[PDF]</a></span></center></td>
+        <td align=center width=20px><center><span style="font-size:28px"><a href="https://youtu.be/kVoIIsdoQR4">[Video]</a></span></center></td>
+        <td align=center width=20px><center><span style="font-size:28px"><a href="https://github.com/natesimon/MonoNav/">[Code]</a></span></center></td>
         <tr/>
     </table>
     <br></br>
     <center><div style="font-size:18px">To appear: <a href="https://iser2023.org/">ISER 2023</a>.</div></center>
     <br>
-    <center><div style="font-size:18px; width:800px"> <b>Warning:</b> This is a research preview for the <a href="https://wp.nyu.edu/workshopiros2023superautonomy/">Learning Robot Super Autonomy</a> Workshop at IROS 2023. Evaluation against state of the art monocular navigation baselines is underway. Stay tuned!</div></center>
-    <!-- <table align=center width=500px>
-    <p style="margin-top:4px;"></p>
-    <tr><td width=1000px>
-        <center><a href="../assets/img/publication_preview/MonoNav_Anchor.png"><img src = "../assets/img/publication_preview/MonoNav_Anchor.png" width="400px"></img></a><br></center>
-    </td></tr>
-    </table><br> -->
+    <center><div style="font-size:18px; width:400px"> <b>Warning:</b> This is a research preview for the <a href="https://wp.nyu.edu/workshopiros2023superautonomy/">Learning Robot Super Autonomy</a> Workshop at IROS 2023. Evaluation against state of the art monocular navigation baselines is underway. Stay tuned!</div></center>
     <div class="row mt-3">
       <div class="col-sm col-12 mt-3 mt-md-0 d-flex justify-content-center">
           <div class="embed-responsive embed-responsive-16by9" style="width: 90%;">
@@ -50,33 +41,33 @@ layout: default
           </div>
       </div>
     </div>
-    <div style="width:800px; margin:0 auto; text-align:justify"><br></br>
+    <div style="width:400px; margin:0 auto; text-align:justify"><br></br>
     <b>Abstract:</b> The small form factor of micro aerial vehicles (MAVs) makes them highly appealing for autonomous inspection, exploration, and mapping of constrained indoor environments. However, a major challenge with deploying the smallest of these platforms (< 100 g) is their inability to carry sensors that provide high-resolution metric depth information (e.g., LiDAR or stereo cameras). Equipped only with a monocular camera and inertial measurement unit, such systems currently rely on  end-to-end learning or heuristic approaches that directly map images to control inputs, and struggle to fly fast in unknown environments. In this work, we ask the following question: using only a monocular camera and offboard compute, can we create metrically accurate depth maps to leverage the powerful path planning and navigation approaches employed by larger state-of-the-art robotic systems to achieve robust autonomy in unknown environments? 
     We present MonoNav: a fast 3D reconstruction and navigation stack for MAVs that leverages recent advances in depth prediction neural networks to enable metrically accurate 3D scene reconstruction from a stream of monocular images and poses. MonoNav uses off-the-shelf pre-trained monocular depth estimation and fusion techniques to construct a map, then searches over motion primitives to plan a collision-free trajectory to the goal. In extensive hardware experiments, we demonstrate how MonoNav enables the Crazyflie (a 37 g MAV) to navigate fast (0.5 m/s) in cluttered indoor environments.
     </div>
     <br><hr>
     <center><h1>MonoNav System Overview</h1></center>
-    <div style="width:800px; margin:0 auto; text-align:justify">
+    <div style="width:400px; margin:0 auto; text-align:justify">
       MonoNav uses pre-trained depth-estimation networks (<a href="https://github.com/isl-org/ZoeDepth">ZoeDepth</a>) to convert RGB images into depth estimates, then fuses them into a 3D reconstruction using <a href = "http://www.open3d.org/">Open3D</a>. MonoNav then selects from motion primitives to navigate collision-free to a goal position.
     </div>
-    <table align=center width=800px>
+    <table align=center width=400px>
     <p style="margin-top:4px;"></p>
-    <tr><td width=1000px>
-        <center><a href="../../assets/img/mononav/MonoNav_System.png"><img src = "../../assets/img/mononav/MonoNav_System.png" width="800px"></img></a></center>
+    <tr><td width=500px>
+        <center><a href="../../assets/img/mononav/MonoNav_System.png"><img src = "../../assets/img/mononav/MonoNav_System.png" width="500px"></img></a></center>
     </td></tr>
     </table>
     <br></br>
     <center><h1>Results: Reconstruction and Planning</h1></center>
-    <div style="width:800px; margin:0 auto; text-align:justify">
+    <div style="width:400px; margin:0 auto; text-align:justify">
       In 15 runs across 10 unique indoor settings, (six of which are shown below), MonoNav navigates successfully and avoids obstacles. Of the 15 runs, MonoNav crashed once (Hall 4), and was prematurely terminated once (Hall 1). In both cases, MonoNav turned into a wall or dead-end that was previously occluded and thus not perceived as an obstacle (and is hence missing from the reconstruction). Such behavior can be fixed by careful tuning of the planning module.
     </div>
     <br></br>
-    <table align="center" width="800px">
+    <table align="center" width="400px">
         <tr>
-            <td width="800px">
+            <td width="400px">
                 <center>
                     <a href="../assets/img/mononav/MonoNavReconstructions.png">
-                        <img src="../assets/img/mononav/MonoNavReconstructions.png" width="700px" alt="Reconstruction Image">
+                        <img src="../assets/img/mononav/MonoNavReconstructions.png" width="500px" alt="Reconstruction Image">
                     </a>
                 </center>
             </td>
