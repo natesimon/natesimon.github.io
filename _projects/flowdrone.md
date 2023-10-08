@@ -11,29 +11,36 @@ This guide walks through the design of FlowDrone, an autonomous quadrotor platfo
 
 There is a great deal of open-source content by PX4 (tutorials, pages, forum Q&A). This guide is meant to augment that content by providing a clear, descriptive build guide for one specific platform. Details specific to the FlowDrone's gust rejection capability will be outlined in later sections: [Mast & DAQ](https://natesimon.github.io/projects/flowdrone/#mast-and-daq) and [Results](https://natesimon.github.io/projects/flowdrone/#results).
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/x500/X500.jpg_original" title="example image" class="img-fluid rounded z-depth-1" %}
-        <div class="caption">The FlowDrone platform in hover.</div>
-    </div>
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/x500/system_overview_freq.png" title="example image" class="img-fluid rounded z-depth-1" %}
-        <div class="caption">The system overview, as instantiated in our paper. The system consisted of a Pixhawk 4 autopilot (for low-level control), Raspberry Pi companion computer (for learning-based autonomous control in Python), and a custom MAST flow sensor with corresponding data acquisition unit (DAQ).</div>
+<div class="container" style="font-size: 20px; width: 100%; max-width: 800px; margin: 0 auto;">
+    <div class="row">
+        <!-- First column (appears second on small devices) -->
+        <div class="col-md-12 col-lg-4 mt-3 order-md-2 order-lg-1">
+            <div class="content">
+                <!-- Your content for the first column here -->
+                {% include figure.html path="assets/img/x500/X500.jpg_original" title="example image" class="img-fluid rounded z-depth-1" %}
+                <div class="caption">The FlowDrone platform in hover.</div>
+            </div>
+        </div>
+        <!-- Second column (appears first on small devices) -->
+        <div class="col-md-12 col-lg-8 mt-3 order-md-1 order-lg-2">
+            <div class="content">
+                <!-- Your content for the second column here -->
+                {% include figure.html path="assets/img/x500/system_overview_freq.png" title="example image" class="img-fluid rounded z-depth-1" %}
+                <div class="caption">The system overview, as instantiated in our paper. The system consisted of a Pixhawk 4 autopilot (for low-level control), Raspberry Pi companion computer (for learning-based autonomous control in Python), and a custom MAST flow sensor with corresponding data acquisition unit (DAQ).</div>
+            </div>
+        </div>
     </div>
 </div>
-<style>
-    .row .img-fluid {
-        height: 100%;
-    }
-</style>
 
 If you find this guide to be helpful in your research, please cite our [paper](https://arxiv.org/pdf/2210.05857.pdf), which is to appear at [ICRA 2023](https://www.icra2023.org/).
 ```
-@article{simon2022flowdrone,
+@inproceedings{simon2023flowdrone,
   title={FlowDrone: wind estimation and gust rejection on UAVs using fast-response hot-wire flow sensors},
   author={Simon, Nathaniel and Ren, Allen Z and Piqu{\'e}, Alexander and Snyder, David and Barretto, Daphne and Hultmark, Marcus and Majumdar, Anirudha},
-  journal={arXiv preprint arXiv:2210.05857},
-  year={2022}
+  booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={5393--5399},
+  year={2023},
+  organization={IEEE}
 }
 
 ```
