@@ -32,7 +32,7 @@ There is a great deal of open-source content by PX4 (tutorials, pages, forum Q&A
     </div>
 </div>
 
-If you find this guide to be helpful in your research, please cite our [paper](https://arxiv.org/pdf/2210.05857.pdf), which is to appear at [ICRA 2023](https://www.icra2023.org/).
+If you find this guide to be helpful in your research, please cite our [paper](https://arxiv.org/pdf/2210.05857.pdf), which appeared at [ICRA 2023](https://www.icra2023.org/).
 ```
 @inproceedings{simon2023flowdrone,
   title={FlowDrone: wind estimation and gust rejection on UAVs using fast-response hot-wire flow sensors},
