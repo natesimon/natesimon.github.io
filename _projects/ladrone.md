@@ -3,7 +3,7 @@ layout: default
 permalink: /ladrone/
 title: LaDrone
 description: Micro Aerial Vehicles as Lagrangian Particles in the Atmospheric Boundary Layer
-img: assets/img/LaDrone.jpg
+img: assets/img/LaDrone_Outside.jpeg
 importance: 1
 category: work
 ---
@@ -72,7 +72,7 @@ category: work
 <br>
 <div style="text-align: center; max-width: 800px; margin: 0 auto;">
     <p style="margin-top: 4px;"></p>
-    <a href="../../assets/img/LaDrone.jpg">
-        <img src="../../assets/img/LaDrone.jpg" alt="LaDrone System" style="width: 80%;">
+    <a href="../../assets/img/LaDrone_Outside.jpeg">
+        <img src="../../assets/img/LaDrone_Outside.jpeg" alt="LaDrone System" style="width: 80%;">
     </a>
 </div>

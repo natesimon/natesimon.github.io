@@ -34,7 +34,7 @@ category: work
 <table style="width: 70%; max-width: 800px; margin: 0 auto;">
     <tr>
     <td align=center width=20px><center><span style="font-size:28px">
-        <a href="../../assets/pdf/MonoNav_IROS2023.pdf" target="_blank"><img src="../assets/img/PDF_file_icon.png" alt="PDF File Icon" style="max-width: 50px; height: auto;"></a></span></center>
+        <a href="../../assets/pdf/MonoNav_ISER2023.pdf" target="_blank"><img src="../assets/img/PDF_file_icon.png" alt="PDF File Icon" style="max-width: 50px; height: auto;"></a></span></center>
     </td>
     <td align=center width=20px><center><span style="font-size:28px">
         <a href="https://youtu.be/kVoIIsdoQR4" target="_blank"><img src="../assets/img/YouTube_full-color_icon_(2017).png" alt="Youtube Play Icon" style="max-width: 50px; height: auto;"></a></span></center>
@@ -43,7 +43,7 @@ category: work
         <a href="https://github.com/natesimon/MonoNav/" target="_blank"><img src="../assets/img/GitHub_Invertocat_Logo.png" alt="Github Icon" style="max-width: 50px; height: auto;"></a></span></center>
     </td></tr>
     <tr>
-    <td align=center width=20px><center><span style="font-size:28px"><a href="../../assets/pdf/MonoNav_IROS2023.pdf">[PDF]</a></span></center></td>
+    <td align=center width=20px><center><span style="font-size:28px"><a href="../../assets/pdf/MonoNav_ISER2023.pdf">[PDF]</a></span></center></td>
     <td align=center width=20px><center><span style="font-size:28px"><a href="https://youtu.be/kVoIIsdoQR4">[Video]</a></span></center></td>
     <td align=center width=20px><center><span style="font-size:28px"><a href="https://github.com/natesimon/MonoNav/">[Code]</a></span></center></td>
     </tr>
