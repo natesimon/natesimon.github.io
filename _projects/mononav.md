@@ -37,7 +37,7 @@ category: work
         <a href="../../assets/pdf/MonoNav_ISER2023.pdf" target="_blank"><img src="../assets/img/PDF_file_icon.png" alt="PDF File Icon" style="max-width: 50px; height: auto;"></a></span></center>
     </td>
     <td align=center width=20px><center><span style="font-size:28px">
-        <a href="https://youtu.be/kVoIIsdoQR4" target="_blank"><img src="../assets/img/YouTube_full-color_icon_(2017).png" alt="Youtube Play Icon" style="max-width: 50px; height: auto;"></a></span></center>
+        <a href="https://youtu.be/msWLSfOmTpI" target="_blank"><img src="../assets/img/YouTube_full-color_icon_(2017).png" alt="Youtube Play Icon" style="max-width: 50px; height: auto;"></a></span></center>
     </td>
         <td align=center width=20px><center><span style="font-size:28px">
         <a href="https://github.com/natesimon/MonoNav/" target="_blank"><img src="../assets/img/GitHub_Invertocat_Logo.png" alt="Github Icon" style="max-width: 50px; height: auto;"></a></span></center>
@@ -78,7 +78,7 @@ category: work
 <div class="row mt-3">
     <div class="col-sm col-12 mt-3 mt-md-0 d-flex justify-content-center">
         <div class="embed-responsive embed-responsive-16by9" style="width: 100%; max-width: 800px; margin: 0 auto;">
-            <iframe class="embed-responsive-item rounded z-depth-1" src="https://www.youtube.com/embed/kVoIIsdoQR4"></iframe>
+            <iframe class="embed-responsive-item rounded z-depth-1" src="https://www.youtube.com/embed/msWLSfOmTpI"></iframe>
         </div>
     </div>
 </div>
