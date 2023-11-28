@@ -66,15 +66,13 @@ category: work
         </td>
         <td style="width: 80%;">
             <p style="font-size: 20px;">
-                <b>To appear:</b> <a href="https://iser2023.org/">ISER 2023</a>.
+                <b>In Proceedings:</b> <a href="https://iser2023.org/">ISER 2023</a>.
             </p>
         </td>
     </tr>
 </table>
 <br>
-<center><div style="font-size: 20px; width: 100%; max-width: 800px; margin: 0 auto;">
-    <b>Warning:</b> This is a research preview. Evaluation against state of the art monocular navigation baselines is underway. Stay tuned!
-</div></center>
+
 <div class="row mt-3">
     <div class="col-sm col-12 mt-3 mt-md-0 d-flex justify-content-center">
         <div class="embed-responsive embed-responsive-16by9" style="width: 100%; max-width: 800px; margin: 0 auto;">
@@ -90,7 +88,7 @@ category: work
 <center><h2>MonoNav System Overview</h2></center>
 <br>
 <div style="font-size: 18px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
-    MonoNav uses pre-trained depth-estimation networks (<a href="https://github.com/isl-org/ZoeDepth">ZoeDepth</a>) to convert RGB images into depth estimates, then fuses them into a 3D reconstruction using <a href = "http://www.open3d.org/">Open3D</a>. MonoNav then selects from motion primitives to navigate collision-free to a goal position.
+    MonoNav uses pre-trained depth-estimation networks (<a href="https://github.com/isl-org/ZoeDepth">ZoeDepth</a>) to convert RGB images into depth estimates, then fuses them into a 3D reconstruction using <a href = "http://www.open3d.org/">Open3D</a>. MonoNav then selects from motion primitives to navigate collision-free to a goal position. If the motion primitive selection problem is infeasible (e.g., no motion primitive remains sufficiently far from obstacles), then MonoNav executes a safety maneuver (e.g., stop and land).
 </div>
 <div style="text-align: center; max-width: 800px; margin: 0 auto;">
     <p style="margin-top: 4px;"></p>
@@ -99,9 +97,9 @@ category: work
     </a>
 </div>
 <br>
-<center><h2>Results: Reconstruction and Planning</h2></center>
+<center><h2>Examples: Reconstruction and Planning</h2></center>
 <div style="font-size: 18px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
-    In 15 runs across 10 unique indoor settings, (six of which are shown below), MonoNav navigates successfully and avoids obstacles. Of the 15 runs, MonoNav crashed once (Hall 4), and was prematurely terminated once (Hall 1). In both cases, MonoNav turned into a wall or dead-end that was previously occluded and thus not perceived as an obstacle (and is hence missing from the reconstruction). Such behavior can be fixed by careful tuning of the planning module.
+    MonoNav is capable of navigating in diverse, constrained indoor environments. Specifically, hallways with corners, curved walls, and furniture. The crash in Hall 4 (bottom right) was due to MonoNav turning into a previously occluded obstacle. This limitation occurs because MonoNav is currently configured to explore aggressively, treating unseen space as free.
 </div>
 <div style="text-align: center; max-width: 800px; margin: 0 auto;">
     <p style="margin-top: 4px;"></p>
@@ -109,3 +107,35 @@ category: work
         <img src="../../assets/img/mononav/MonoNavReconstructions.png" alt="MonoNav Reconstructions" style="width: 100%;">
     </a>
 </div>
+<br>
+<center><h2>Results: Comparison to State of the Art</h2></center>
+<div style="font-size: 18px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
+    We evaluate MonoNav against <a href="https://general-navigation-models.github.io/nomad/">NoMaD: Goal Masking Diffusion Policies for Navigation and Exploration</a>, a state of the art approach in monocular navigation. NoMaD uses a transformer encoder and diffusion policy, trained over 100 hours of robot navigation data, to directly output action candidates with optional goal-image conditioning to further refine the action candidates.  
+</div>
+<br>
+<div style="font-size: 18px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
+    We find that NoMaD performs well when a clear maneuver is required (e.g., turn left to avoid a wall), but struggles in settings where more nuanced action candidates are required. For example, in a straight hallway segment, NoMaD produces straight action candidates, which are insufficiently expressive and evasive to avoid collision as the quadrotor drifts into the wall.
+</div>
+<div style="text-align: center; max-width: 800px; margin: 0 auto;">
+    <p style="margin-top: 4px;"></p>
+    <a href="../../assets/img/mononav/MonoNav_Results.png">
+        <img src="../../assets/img/mononav/MonoNav_Results.png" alt="MonoNav System" style="width: 100%;">
+    </a>
+</div>
+<div style="font-size: 18px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
+   In 15 trials in 5 unique environments, we plot the goal positions, trajectories, and crash locations. MonoNav's key advantage is its ability to explicitly reason about scale, which allows self-arresting when an imminent collision is detected. This capability results in a 4x reduction in collisions. This increase in safety comes at the cost of conservatism, as MonoNav has an associated 22% reduction in goal completion.
+</div>
+<br>
+<div style="font-size: 18px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
+    <p><strong>Bibtex</strong></p>
+    <pre>
+@inproceedings{simon2023mononav,
+title = {MonoNav: MAV Navigation via Monocular Depth Estimation and Reconstruction},
+author = {Simon, Nathaniel and Majumdar, Anirudha},
+booktitle = {18th International Symposium on Experimental Robotics (ISER) 2023},
+video = {https://youtu.be/msWLSfOmTpI},
+year = {2023}
+}
+    </pre>
+</div>
+
