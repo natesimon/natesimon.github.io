@@ -18,7 +18,11 @@ category: work
         <td style="text-align: center; width: 100px;">
             <span style="font-size: 22px; font-weight:bold;"><a href="https://www.linkedin.com/in/skywalkerli/" target="_blank">Skywalker Li</a></span>
         </td>
-        <td style="text-align: center; width: 100px;">
+    </tr>
+</table>
+<table style="width: 60%; max-width: 800px; margin: 0 auto;">
+    <tr>
+            <td style="text-align: center; width: 100px;">
             <span style="font-size: 22px; font-weight:bold;"><a href="https://mae.princeton.edu/people/graduate-students/conlin-0" target="_blank">Nick Conlin</a></span>
         </td>
     </tr>
@@ -60,11 +64,20 @@ category: work
         </td>
         <td style="width: 50%;">
             <p style="font-size: 20px;">
-                <b>To appear:</b> <a href="https://meetings.aps.org/Meeting/DFD23/Session/J21.9">APS DFD 2023</a>.
+                <b>As seen at:</b> <a href="https://meetings.aps.org/Meeting/DFD23/Session/J21.9">APS DFD 2023</a>.
             </p>
         </td>
     </tr>
 </table>
+<br>
+<div class="row mt-3">
+    <div class="col-sm col-12 mt-3 mt-md-0 d-flex justify-content-center">
+        {% include video.html path="assets/video/Flow.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true loop=true%}
+    </div>
+</div>
+<div class="caption" style="font-size: 18px;">
+    Wind tunnel footage of LaDrone hovering in a velocity field (left to right), with time-resolved laser illumination of tracer particles. LaDrone is programmed to behave like a neutrally buoyant particle.
+</div>
 <br>
 <div style="font-size: 18px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
 <b>Abstract:</b> Conventional particle velocimetry techniques are restricted to measurement volumes on the centimeter scale; recent tracking algorithm and tracer particle advances increase domain sizes into the meter range, but to reach hundreds or thousands of meters alternative methods are required. The authors propose LaDrone, a particle velocimetry technique based on 40 gram Micro Aerial Vehicles (MAVs). Tasked only to compensate for gravity, LaDrones move freely due to the wind force in three dimensions. They can be tracked at centimeter-level precision through RTK GPS, collecting atmospheric boundary layer data as they are swept by the wind. Such data could be used to analyze the atmosphere at the kilometer scale. 
@@ -75,4 +88,7 @@ category: work
     <a href="../../assets/img/LaDrone_Outside.jpeg">
         <img src="../../assets/img/LaDrone_Outside.jpeg" alt="LaDrone System" style="width: 80%;">
     </a>
+</div>
+<div class="caption" style="font-size: 18px;">
+    LaDrone in the field.
 </div>
