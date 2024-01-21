@@ -55,7 +55,7 @@ category: work
     </td>
     </tr>
 </table>
-<center><span style="font-size:30px"><a href="https://robo.princeton.edu/" target="_blank">Princeton University</a></span></center>
+<center><span style="font-size:30px"><a href="https://mae.princeton.edu/" target="_blank">Princeton University</a></span></center>
 <br>
 <table style="width: 80%; max-width: 800px; margin: 0 auto;">
     <tr>
@@ -81,18 +81,22 @@ category: work
     </tr>
 </table>
 <br>
+<div style="text-align: center; font-size: 20px; width: 60%; max-width: 800px; margin: 0 auto;">
+    <b>Warning:</b> This is ongoing work. Stay tuned for more details and comprehensive evaluation!
+</div>
+<br>
 <div class="row mt-3">
     <div class="col-sm col-12 mt-3 mt-md-0 d-flex justify-content-center">
         {% include video.html path="assets/video/Flow.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true loop=true%}
     </div>
 </div>
 <div class="caption" style="font-size: 18px;">
-    Wind tunnel footage of LaDrone hovering in a velocity field (left to right), with time-resolved laser illumination of tracer particles. Image credit: Girguis Sedky.
+    Slow motion video of LaDrone hovering in a flow (left to right), with tracer particles illuminated by a time-resolved laser. Image credit: Girguis Sedky.
 <br>
 
 <div style="font-size: 20px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
 <p style="margin-top: 4px;"></p>
-<b style="font-size: 22px;">Abstract:</b> Conventional particle velocimetry techniques are restricted to measurement volumes on the centimeter scale; recent tracking algorithm and tracer particle advances increase domain sizes into the meter range, but to reach hundreds or thousands of meters alternative methods are required. The authors propose LaDrone, a particle velocimetry technique based on a 40 gram Micro Aerial Vehicles (MAVs). Tasked only to compensate for gravity, LaDrones move freely due to the wind force in three dimensions. They can be tracked at centimeter-level precision through RTK GPS, collecting atmospheric boundary layer data as they are swept by the wind. Such data could be used to analyze the atmosphere at the kilometer scale. 
+<b style="font-size: 22px;">Abstract:</b> Scientists are interested in the movement of particles in our atmosphere, for applications such as measuring and modeling pollutant dispersion. Conventional particle velocimetry techniques are restricted to measurement volumes on the centimeter scale; recent tracking algorithm and tracer particle advances increase domain sizes into the meter range, but to reach hundreds or thousands of meters alternative methods are required. The authors propose LaDrone, a particle velocimetry technique based on a 40 gram Micro Aerial Vehicle (MAV). Tasked only to compensate for gravity, LaDrones move freely due to the wind force in three dimensions. They can be tracked at centimeter-level precision using RTK GPS, collecting atmospheric boundary layer data as they are swept by the wind. Such data could be used to analyze the atmosphere at the kilometer scale. 
 </div>
 <br>
 
@@ -117,11 +121,23 @@ category: work
     </a>
 </div>
 <div class="caption" style="text-align: center; font-size: 18px; width: 80%;  margin: 0 auto;">
-    LaDrone consists of entirely off-the-shelf components: a <a href="https://www.bitcraze.io/products/crazyflie-2-1/">Crazyflie 2.1</a> micro aerial vehicle, a <a href="https://www.sparkfun.com/products/15136">ZED-F9P</a> RTK GPS board, antenna, and a <a href="https://www.sparkfun.com/products/13712">data logger</a>.
+    LaDrone consists of entirely off-the-shelf components: a <a href="https://www.bitcraze.io/products/crazyflie-2-1/">Crazyflie 2.1</a> micro aerial vehicle, a <a href="https://www.sparkfun.com/products/15136">ZED-F9P</a> RTK GPS board + antenna, and a <a href="https://www.sparkfun.com/products/13712">data logger</a>.
+</div>
+
+<div style="font-size: 20px; width: 100%; max-width: 800px; margin: 0 auto; text-align:left">
+<p style="margin-top: 4px;"></p>
+<b style="font-size: 22px;">Ongoing work:</b>
+<ol>
+  <li>Reduce weight through custom components,</li>
+  
+  <li>Improve GNSS tracking performance with L2 antenna,</li>
+
+  <li>Evaluate in windy, outdoor environments.</li>
+</ol>
 </div>
 
 <div style="font-size: 18px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
 <p style="margin-top: 4px;"></p>
-<b style="font-size: 20px;">Why LaDrone?</b> In fluid dynamics, the study of a single fluid parcel or particle along its trajectory is known as the <i>Lagrangian</i> specification. Since we aspire to use a drone to track the movement of an individual fluid parcel, we call our "Lagrangian" vehicle: LaDrone!
+<b style="font-size: 20px;">The story behind the name:</b> In fluid dynamics, the study of a single fluid parcel or particle along its trajectory is known as the <i>Lagrangian</i> specification. Since we aspire to use a drone to track the movement of an individual fluid parcel, we call our "Lagrangian" vehicle: LaDrone!
 </div>
 <br>

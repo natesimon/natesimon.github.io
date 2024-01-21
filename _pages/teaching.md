@@ -4,7 +4,7 @@ permalink: /teaching/
 title: teaching
 description: as a graduate teaching assistant
 nav: true
-nav_order: 5
+nav_order: 4
 ---
 
 ### Princeton University
