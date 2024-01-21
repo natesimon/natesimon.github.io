@@ -64,7 +64,18 @@ category: work
         </td>
         <td style="width: 50%;">
             <p style="font-size: 20px;">
-                <b>As seen at:</b> <a href="https://meetings.aps.org/Meeting/DFD23/Session/J21.9">APS DFD 2023</a>.
+                <b>As seen at:</b> <a href="https://meetings.aps.org/Meeting/DFD23/Session/J21.9">APS DFD 2023</a>.<br>
+                <a href="../assets/pdf/LaDrone_APS_2023.pdf">(Presentation slides.)</a>
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: center; width: 50%;">
+            <a href="https://thenounproject.com/icon/newspaper-68257/" target="_blank"><img src="../assets/img/mononav/noun-newspaper.png" alt="Image Description" style="max-width: 50px; height: auto;"></a>
+        </td>
+        <td style="width: 50%;">
+            <p style="font-size: 20px;">
+                <b>APS News feature: </b><a href="https://aps.org/publications/apsnews/202402/drones.cfm">Drones Blowing, and Flying, In The Wind</a>.
             </p>
         </td>
     </tr>
@@ -76,19 +87,41 @@ category: work
     </div>
 </div>
 <div class="caption" style="font-size: 18px;">
-    Wind tunnel footage of LaDrone hovering in a velocity field (left to right), with time-resolved laser illumination of tracer particles. LaDrone is programmed to behave like a neutrally buoyant particle.
+    Wind tunnel footage of LaDrone hovering in a velocity field (left to right), with time-resolved laser illumination of tracer particles. Image credit: Girguis Sedky.
+<br>
+
+<div style="font-size: 20px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
+<p style="margin-top: 4px;"></p>
+<b style="font-size: 22px;">Abstract:</b> Conventional particle velocimetry techniques are restricted to measurement volumes on the centimeter scale; recent tracking algorithm and tracer particle advances increase domain sizes into the meter range, but to reach hundreds or thousands of meters alternative methods are required. The authors propose LaDrone, a particle velocimetry technique based on a 40 gram Micro Aerial Vehicles (MAVs). Tasked only to compensate for gravity, LaDrones move freely due to the wind force in three dimensions. They can be tracked at centimeter-level precision through RTK GPS, collecting atmospheric boundary layer data as they are swept by the wind. Such data could be used to analyze the atmosphere at the kilometer scale. 
 </div>
 <br>
-<div style="font-size: 18px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
-<b>Abstract:</b> Conventional particle velocimetry techniques are restricted to measurement volumes on the centimeter scale; recent tracking algorithm and tracer particle advances increase domain sizes into the meter range, but to reach hundreds or thousands of meters alternative methods are required. The authors propose LaDrone, a particle velocimetry technique based on 40 gram Micro Aerial Vehicles (MAVs). Tasked only to compensate for gravity, LaDrones move freely due to the wind force in three dimensions. They can be tracked at centimeter-level precision through RTK GPS, collecting atmospheric boundary layer data as they are swept by the wind. Such data could be used to analyze the atmosphere at the kilometer scale. 
+
+<div style="font-size: 20px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
+<p style="margin-top: 4px;"></p>
+<b style="font-size: 22px;">Core Aspects of LaDrone:</b>
+<ol>
+  <b><li>Micro Aerial Vehicle (~40 grams)</li></b>
+  We want LaDrone to be as light as possible. By keeping the inertia low, LaDrone responds faster to subtle velocity changes in the surrounding fluid. This enables the measurement of smaller length and time scales that a larger vehicle would filter out. To do this, we use the 27 gram open-source <a href="https://www.bitcraze.io/products/crazyflie-2-1/">Crazyflie 2.1</a> as a base.
+  <b><li>Gravity Compensation Control (Neutral Buoyancy)</li></b>
+  LaDrone uses a simple heuristic to behave like a fluid particle: <i>compensate only for gravity, letting the fluid forces push you in every direction</i>. To do this, we instruct LaDrone to keep its roll and pitch angles zero, and output its weight in thrust. This keeps the thrust vector equal and opposite the weight vector!
+  <b><li>Centimeter-level GNSS Tracking</li></b>
+  Conventional GNSS tracking is not very accurate due to <a href="https://en.wikipedia.org/wiki/Error_analysis_for_the_Global_Positioning_System">numerous sources of error</a>. However, correction signals can reduce this error from 2-10 m to sub-centimeter precision! Since our position is not needed real-time, we use a post-processing kinematic (PPK) approach (<a href="https://rtklibexplorer.wordpress.com/2019/08/24/dual-frequency-ppk-solutions-with-rtklib-and-the-u-blox-f9p/">example</a>).
+</ol>
 </div>
 <br>
+
 <div style="text-align: center; max-width: 800px; margin: 0 auto;">
     <p style="margin-top: 4px;"></p>
     <a href="../../assets/img/LaDrone_Outside.jpeg">
         <img src="../../assets/img/LaDrone_Outside.jpeg" alt="LaDrone System" style="width: 80%;">
     </a>
 </div>
-<div class="caption" style="font-size: 18px;">
-    LaDrone in the field.
+<div class="caption" style="text-align: center; font-size: 18px; width: 80%;  margin: 0 auto;">
+    LaDrone consists of entirely off-the-shelf components: a <a href="https://www.bitcraze.io/products/crazyflie-2-1/">Crazyflie 2.1</a> micro aerial vehicle, a <a href="https://www.sparkfun.com/products/15136">ZED-F9P</a> RTK GPS board, antenna, and a <a href="https://www.sparkfun.com/products/13712">data logger</a>.
 </div>
+
+<div style="font-size: 18px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
+<p style="margin-top: 4px;"></p>
+<b style="font-size: 20px;">Why LaDrone?</b> In fluid dynamics, the study of a single fluid parcel or particle along its trajectory is known as the <i>Lagrangian</i> specification. Since we aspire to use a drone to track the movement of an individual fluid parcel, we call our "Lagrangian" vehicle: LaDrone!
+</div>
+<br>
