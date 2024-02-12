@@ -34,7 +34,7 @@ category: work
 <table style="width: 70%; max-width: 800px; margin: 0 auto;">
     <tr>
     <td align=center width=20px><center><span style="font-size:28px">
-        <a href="../../assets/pdf/MonoNav_ISER2023.pdf" target="_blank"><img src="../assets/img/PDF_file_icon.png" alt="PDF File Icon" style="max-width: 50px; height: auto;"></a></span></center>
+        <a href="https://arxiv.org/pdf/2311.14100.pdf" target="_blank"><img src="../assets/img/PDF_file_icon.png" alt="PDF File Icon" style="max-width: 50px; height: auto;"></a></span></center>
     </td>
     <td align=center width=20px><center><span style="font-size:28px">
         <a href="https://youtu.be/msWLSfOmTpI" target="_blank"><img src="../assets/img/YouTube_full-color_icon_(2017).png" alt="Youtube Play Icon" style="max-width: 50px; height: auto;"></a></span></center>
@@ -43,8 +43,8 @@ category: work
         <a href="https://github.com/natesimon/MonoNav/" target="_blank"><img src="../assets/img/GitHub_Invertocat_Logo.png" alt="Github Icon" style="max-width: 50px; height: auto;"></a></span></center>
     </td></tr>
     <tr>
-    <td align=center width=20px><center><span style="font-size:28px"><a href="../../assets/pdf/MonoNav_ISER2023.pdf">[PDF]</a></span></center></td>
-    <td align=center width=20px><center><span style="font-size:28px"><a href="https://youtu.be/kVoIIsdoQR4">[Video]</a></span></center></td>
+    <td align=center width=20px><center><span style="font-size:28px"><a href="https://arxiv.org/pdf/2311.14100.pdf">[PDF]</a></span></center></td>
+    <td align=center width=20px><center><span style="font-size:28px"><a href="https://youtu.be/msWLSfOmTpI">[Video]</a></span></center></td>
     <td align=center width=20px><center><span style="font-size:28px"><a href="https://github.com/natesimon/MonoNav/">[Code]</a></span></center></td>
     </tr>
 </table>
@@ -83,6 +83,17 @@ category: work
 <br>
 <div style="font-size: 18px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
 <b>Abstract:</b> A major challenge in deploying the smallest of Micro Aerial Vehicle (MAV) platforms (< 100 g) is their inability to carry sensors that provide high-resolution metric depth information (e.g., LiDAR or stereo cameras). Current systems rely on end-to-end learning or heuristic approaches that directly map images to control inputs, and struggle to fly fast in unknown environments. In this work, we ask the following question: using only a monocular camera, optical odometry, and offboard computation, can we create metrically accurate maps to leverage the powerful path planning and navigation approaches employed by larger state-of-the-art robotic systems to achieve robust autonomy in unknown environments? We present MonoNav: a fast 3D reconstruction and navigation stack for MAVs that leverages recent advances in depth prediction neural networks to enable metrically accurate 3D scene reconstruction from a stream of monocular images and poses. MonoNav uses off-the-shelf pre-trained monocular depth estimation and fusion techniques to construct a map, then searches over motion primitives to plan a collision-free trajectory to the goal. In extensive hardware experiments, we demonstrate how MonoNav enables the Crazyflie (a 37 g MAV) to navigate fast (0.5 m/s) in cluttered indoor environments. We evaluate MonoNav against a state-of-the-art end-to-end approach, and find that the collision rate in navigation is significantly reduced (by a factor of 4). This increased safety comes at the cost of conservatism in terms of a 22% reduction in goal completion.
+</div>
+<br>
+<center><h2><a href="https://github.com/natesimon/MonoNav/">Try MonoNav!</a></h2></center>
+<div style="font-size: 18px; width: 100%; max-width: 800px; margin: 0 auto; text-align:justify">
+    The <a href="https://github.com/natesimon/MonoNav/">MonoNav GitHub Repo</a> includes all of the code for this project, including a demo dataset (monocular images and poses) to run depth estimation, reconstruction, and planning pipelines out of the box (no robot needed).
+</div>
+<div style="text-align: center; max-width: 800px; margin: 0 auto;">
+    <p style="margin-top: 4px;"></p>
+    <a href="https://raw.githubusercontent.com/natesimon/MonoNav/main/utils/reconstruction.gif">
+        <img src="https://raw.githubusercontent.com/natesimon/MonoNav/main/utils/reconstruction.gif" alt="MonoNav Demo" style="width: 80%;">
+    </a>
 </div>
 <br>
 <center><h2>MonoNav System Overview</h2></center>
@@ -130,12 +141,11 @@ category: work
     <p><strong>Bibtex</strong></p>
     <pre>
 @inproceedings{simon2023mononav,
-title = {MonoNav: MAV Navigation via Monocular Depth Estimation and Reconstruction},
-author = {Simon, Nathaniel and Majumdar, Anirudha},
-booktitle = {18th International Symposium on Experimental Robotics (ISER) 2023},
-video = {https://youtu.be/msWLSfOmTpI},
-year = {2023}
-}
-    </pre>
+    title     = {MonoNav: MAV Navigation via Monocular Depth Estimation and Reconstruction},
+    author    = {Nathaniel Simon and Anirudha Majumdar},
+    booktitle = {Symposium on Experimental Robotics (ISER)},
+    year      = {2023},
+    url       = {https://arxiv.org/abs/2311.14100}
+}</pre>
 </div>
 

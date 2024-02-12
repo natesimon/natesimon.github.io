@@ -2,24 +2,24 @@
 ---
 
 @inproceedings{simon2023mononav,
-  title={MonoNav: MAV Navigation via Monocular Depth Estimation and Reconstruction},
+  title={{MonoNav: MAV Navigation via Monocular Depth Estimation and Reconstruction}},
   author={Simon, Nathaniel and Majumdar, Anirudha},
-  booktitle={18th International Symposium on Experimental Robotics (ISER) 2023},
+  booktitle={International Symposium on Experimental Robotics (ISER)},
   preview={MonoNav_Anchor.png},
   bibtex_show={true},
   abstract={A major challenge in deploying the smallest of Micro Aerial Vehicle (MAV) platforms (< 100 g) is their inability to carry sensors that provide high-resolution metric depth information (e.g., LiDAR or stereo cameras). Current systems rely on end-to-end learning or heuristic approaches that directly map images to control inputs, and struggle to fly fast in unknown environments. In this work, we ask the following question: using only a monocular camera, optical odometry, and offboard computation, can we create metrically accurate maps to leverage the powerful path planning and navigation approaches employed by larger state-of-the-art robotic systems to achieve robust autonomy in unknown environments? We present MonoNav: a fast 3D reconstruction and navigation stack for MAVs that leverages recent advances in depth prediction neural networks to enable metrically accurate 3D scene reconstruction from a stream of monocular images and poses. MonoNav uses off-the-shelf pre-trained monocular depth estimation and fusion techniques to construct a map, then searches over motion primitives to plan a collision-free trajectory to the goal. In extensive hardware experiments, we demonstrate how MonoNav enables the Crazyflie (a 37 g MAV) to navigate fast (0.5 m/s) in cluttered indoor environments. We evaluate MonoNav against a state-of-the-art end-to-end approach, and find that the collision rate in navigation is significantly reduced (by a factor of 4). This increased safety comes at the cost of conservatism in terms of a 22\% reduction in goal completion.},
   website={/mononav/},
   selected={true},
-  pdf={MonoNav_ISER2023.pdf},
   video={https://youtu.be/msWLSfOmTpI},
   arxiv={2311.14100},
+  code={https://github.com/natesimon/MonoNav/},
   year={2023}
 }
 
 @inproceedings{simon2023flowdrone,
   title={FlowDrone: wind estimation and gust rejection on UAVs using fast-response hot-wire flow sensors},
   author={Simon, Nathaniel and Ren, Allen Z and Piqu{\'e}, Alexander and Snyder, David and Barretto, Daphne and Hultmark, Marcus and Majumdar, Anirudha},
-  booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)},
+  booktitle={International Conference on Robotics and Automation (ICRA)},
   pages={5393--5399},
   year={2023},
   organization={IEEE},
@@ -53,7 +53,7 @@
 @article{snyder2023online,
   title={Online Learning for Obstacle Avoidance},
   author={Snyder, David and Booker, Meghan and Simon, Nathaniel and Xia, Wenhan and Suo, Daniel and Hazan, Elad and Majumdar, Anirudha},
-  journal={To Appear: Conference on Robot Learning 2023.},
+  journal={Conference on Robot Learning (CoRL)},
   url={https://arxiv.org/abs/2306.08776},
   arxiv={2306.08776},
   preview={olc_anchor.png},
