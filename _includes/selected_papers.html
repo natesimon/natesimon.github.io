@@ -3,4 +3,6 @@
             <!-- <h2>selected publications</h2> -->
             <h2>publications</h2>
             {% bibliography -f papers -q @*[selected=true]* %}
+            <h2>patents</h2>
+            {% bibliography -f papers -q @*[patents=true]* %}
           </div>
