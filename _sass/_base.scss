@@ -112,6 +112,20 @@ blockquote {
   margin-right: 1rem;
 }
 
+.highlight-bubble {
+  background-color: #f0f8ff;  /* Light blue background */
+  border: 2px solid #1e90ff;  /* Blue border */
+  border-radius: 10px;        /* Rounded corners */
+  padding: 15px;              /* Inner padding */
+  font-size: 1.1em;           /* Slightly larger text */
+  margin-bottom: 20px;        /* Space below the bubble */
+  margin-right: 20px;         /* Add margin to the right to prevent touching image */
+  float: left;                /* Float the bubble to align next to the floated profile image */
+  width: calc(100% - 270px);  /* Adjust width to prevent collision with the image */
+  box-sizing: border-box;     /* Ensure padding and border are included in the width */
+}
+
+
 @media (min-width: 576px) {
   .profile {
     width: 30%;
