@@ -21,10 +21,10 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 <!-- Highlight bubble -->
-<div class="highlight-bubble">
+<!-- <div class="highlight-bubble">
     <strong>I am on the job market this year, seeking full-time engineering roles in aerospace and robotics.</strong>
     If you or your team are hiring, don't hesitate to reach out!
-</div>
+</div> -->
 
 I am a PhD Candidate in the [Intelligent Robot Motion Lab](https://irom-lab.princeton.edu/) and [FAST Group](https://fluids.princeton.edu/), co-advised by [Ani Majumdar](https://irom-lab.princeton.edu/majumdar/) and [Marcus Hultmark](https://mae.princeton.edu/people/faculty/hultmark). My research aims to improve aerial vehicle performance in the real world through tightly-integrated perception, planning, and control. Specifically, using high-dimensional sensors (such as vision and flow sensing) and machine learning to unlock new capabilities. During my PhD, I invented an omnidirectional flow sensor for UAVs [(patent)](#patents) and developed a wind-aware flight controller for gust rejection [(FlowDrone)](/flowdrone/). In addition, I advanced state-of-the-art in monocular micro aerial vehicle navigation through simultaneous depth estimation and 3D reconstruction [(MonoNav)](/mononav/). My work aims to drive transformative autonomy in robotics applications such as urban air mobility, package delivery, infrastructure inspection, and ISR.
 
