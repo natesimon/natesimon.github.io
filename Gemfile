@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'uri', '>= 0'
 group :jekyll_plugins do
     gem 'jekyll'
     gem 'jekyll-archives'
